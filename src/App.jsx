@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import {  Route, Routes,HashRouter } from 'react-router-dom'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Dashboard from './pages/Dashboard'
@@ -129,7 +129,7 @@ const {
   return (
     <>
       <div className='bg-stone-300'>
-        <BrowserRouter >
+        <HashRouter >
           <Navbar></Navbar>
           {error? <Error message={error} ></Error>:(
             <Routes>
@@ -144,7 +144,7 @@ const {
           )}
           
           <Footer></Footer>
-        </BrowserRouter>
+        </HashRouter>
       </div>
 
     </>
